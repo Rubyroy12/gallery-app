@@ -15,6 +15,7 @@ class Images(models.Model):
     location = models.ForeignKey(Location, on_delete=models.DO_NOTHING)
     category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
     posted = models.DateField(auto_now_add=True)
+    photo = models.ImageField(upload_to= 'photos/')
 
 
     def save_image(self):
