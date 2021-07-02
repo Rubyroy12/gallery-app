@@ -15,35 +15,12 @@
     </div>
     <!-- looping through available images -->
 
-    <div class="container-fluid">
-
-        <div class="row justify-content-between">
-            {%for image_item in gallery%}
-
-
-
-                <div class="card" style="width: 18rem;">
-                    <div class="well well-lg p-3" style="text-align: center;border-bottom: 1px solid green;">
-                        <img class="card-img-top" src="{{image_item.photo.url}}" alt="Card image cap"
-                            class="img-responsive" height="200px" width="200px">
-                        <div class="card-body">
-                            <h5 class="card-title">{{image_item.name}}</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-primary">View</a>
-                        </div>
-                    </div>
-                </div>
-                {% empty %}
-                <div class="row">
-                    <h2 class="text-center">There No items in the Gallery</h2>
-                </div>
-           
-            {%endfor%}
-
-
+    <div class="container-fluid row">
+        <div class="col-md-6">
 
         </div>
-
+        <div class="col-md-6" style="background-image: url('https://images.unsplash.com/photo-1569084024058-1632922a4e1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=361&q=80');height:50vh"></div>
+       
 
     </div>
 

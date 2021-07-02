@@ -3,8 +3,8 @@ from .models import Images,Category,Location
 
 # Create your views here.
 def home(request):
-    gallery = Images.objects.all()
-    return render(request,'index.html',{'gallery':gallery})
+    
+    return render(request,'index.html')
 
 
 def gallery(request):
