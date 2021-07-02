@@ -5,7 +5,8 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns =[
-    url('^$', views.home, name='home')
+    url('^$', views.home, name='home'),
+    url('^gallery/', views.gallery, name='gallery')
     
 
 ]

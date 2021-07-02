@@ -6,4 +6,9 @@ def home(request):
     gallery = Images.objects.all()
     return render(request,'index.html',{'gallery':gallery})
 
+
+def gallery(request):
+    gallery = Images.objects.all()
+    return render(request,'gallery.html',{'gallery':gallery})
+
     
