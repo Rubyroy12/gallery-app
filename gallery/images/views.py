@@ -18,7 +18,7 @@ def single_image(request,image_id):
     except DoesNotExist:
         Http404()
     
-    return render(request,'single_image.html',{'image':image})
+    return render(request,'single_image.html',{'gallery':image})
     
     
 
