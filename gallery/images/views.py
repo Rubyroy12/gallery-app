@@ -19,7 +19,12 @@ def single_image(request,image_id):
         Http404()
     
     return render(request,'single_image.html',{'gallery':image})
-    
+
+def technology(request):
+    tech_cetegory=Category.objects.get(pk=1)
+    tech_images=Images.objects.filter(category=tech_cetegory)
+
+    return render(request,'categories/technology.html', {"tech_images": tech_images})
     
 
 

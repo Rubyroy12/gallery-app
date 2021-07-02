@@ -3,11 +3,15 @@ from django.db import models
 # Create your models here.
 
 class Location(models.Model):
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=30,unique='True')
+
+
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=30,unique='True')
+
+    
 
 class Images(models.Model):
     name = models.CharField(max_length=20)
