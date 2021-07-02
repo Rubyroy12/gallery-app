@@ -26,5 +26,9 @@ def technology(request):
 
     return render(request,'categories/technology.html', {"tech_images": tech_images})
     
+def nature(request):
+    nature_category = Category.objects.get(pk=2)
+    nature_images = Images.objects.filter(category=nature_category)
 
+    return render(request,'categories/nature.html', {"nature_images": nature_images})
 
