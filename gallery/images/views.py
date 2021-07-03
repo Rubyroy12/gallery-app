@@ -70,3 +70,6 @@ def search_results(request):
         message = "You have not searched any images"
 
         return render(request,'search.html',{"message":message})
+    
+def about(request):
+    
