@@ -24,11 +24,16 @@ def technology(request):
     tech_cetegory=Category.objects.get(pk=1)
     tech_images=Images.objects.filter(category=tech_cetegory)
 
-    return render(request,'categories/technology.html', {"tech_images": tech_images})
+    return render(request,'category/technology.html', {"tech_images": tech_images})
     
 def nature(request):
     nature_category = Category.objects.get(pk=2)
     nature_images = Images.objects.filter(category=nature_category)
 
-    return render(request,'categories/nature.html', {"nature_images": nature_images})
+    return render(request,'category/nature.html', {"nature_images": nature_images})
 
+def meditation(request):
+    meditation_category = Category.objects.get(pk=3)
+    med_images = Images.objects.filter(category=meditation_category)
+
+    return render(request,'category/meditation.html',{"meditation_images": med_images})
