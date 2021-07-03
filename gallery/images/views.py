@@ -72,4 +72,4 @@ def search_results(request):
         return render(request,'search.html',{"message":message})
     
 def about(request):
-    
+    return render(request,'about.html')
