@@ -11,6 +11,7 @@ urlpatterns =[
     url('^category/technology/$',views.technology, name='technology'),
     url('^category/nature/$',views.nature, name='nature'),
     url('^category/meditation/$',views.meditation, name='meditation'),
+    url('^category/locations/$',views.image_location, name='location'),
 
 
 

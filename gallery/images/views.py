@@ -37,3 +37,21 @@ def meditation(request):
     med_images = Images.objects.filter(category=meditation_category)
 
     return render(request,'category/meditation.html',{"meditation_images": med_images})
+
+
+def image_location(request):
+    nairobi = Location.objects.get(pk=1)
+    karatina  = Location.objects.get(pk=2)
+    nyeri = Location.objects.get(pk=3)
+    nakuru = Location.objects.get(pk=4)
+    mombasa = Location.objects.get(pk=5)
+    marsabit = Location.objects.get(pk=6)
+
+    nairobi_images = Images.objects.filter(location=nairobi)
+    karatina_images = Images.objects.filter(location=karatina)
+    nyeri_images = Images.objects.filter(location=nyeri)
+    nakuru_images = Images.objects.filter(location=nakuru)
+    mombasa_images = Images.objects.filter(location=mombasa)
+    marsabit_images = Images.objects.filter(location=marsabit)
+
+    return render(request, 'location.html', {"nairobi":nairobi_images, "marsabit":marsabit_images, "karatina": karatina_images,"nyeri":nyeri_images,"nakuru":nakuru_images,"mombasa":mombasa_images })
