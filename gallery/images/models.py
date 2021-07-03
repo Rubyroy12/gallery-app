@@ -11,6 +11,11 @@ class Location(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=30,unique='True')
 
+    @classmethod
+    def search_by_category(cls,search_term):
+        image_category = cls.objects.filter(name_contains=search_term)
+        return image_category
+
     
 
 class Images(models.Model):

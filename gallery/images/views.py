@@ -40,7 +40,7 @@ def meditation(request):
 
 
 def image_location(request):
-    nairobi = Location.objects.get(pk=1)
+    nairobi = Location.objects.get(pk=1)#NAIROBI
     karatina  = Location.objects.get(pk=2)
     nyeri = Location.objects.get(pk=3)
     nakuru = Location.objects.get(pk=4)
@@ -55,3 +55,18 @@ def image_location(request):
     marsabit_images = Images.objects.filter(location=marsabit)
 
     return render(request, 'location.html', {"nairobi":nairobi_images, "marsabit":marsabit_images, "karatina": karatina_images,"nyeri":nyeri_images,"nakuru":nakuru_images,"mombasa":mombasa_images })
+
+
+def search_results(request):
+
+    if 'image' in request.GET and request.GET['image']:
+        search_term = request.GET.get('image')
+        searched_images= Images.search_by_category(search_term)
+        message=f"{search_term}"
+
+        return render(request,'search.html',{"message":message,"images":searched_images})
+    else:
+
+        message = "You have not searched any images"
+
+        return render(request,'search.html',{"message":message})
