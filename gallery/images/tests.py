@@ -22,7 +22,6 @@ class CategoryTestClass(TestCase):
 
 class ImagesTestClass(TestCase):
 
-  
     # #set up method
     def setUp(self):
         self.image=Images(name='happy',description="test_description",location=self.location,category=self.category,photo='img1')
@@ -35,7 +34,6 @@ class ImagesTestClass(TestCase):
         images=Images.objects.all()
         self.assertTrue(len(images)>0)
 
-        
     def delete_image(self):
         self.image.delete()
 
